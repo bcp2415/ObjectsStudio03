@@ -1,11 +1,3 @@
-// Code your crewMass function here:
-
-
-// Code your fuelRequired function here:
-
-
-// The pre-selected crew is in the array at the end of this file.
-// Feel free to add, remove, or switch crew members as you see fit.
 
 let candidateA = {
   'name':'Gordon Shumway',
@@ -51,3 +43,20 @@ let candidateF = {
 };
 
 let crew = [candidateB,candidateD,candidateF];
+
+// Code your crewMass function here:
+function calculateCrewMass(crewList) {
+  let totalMass = 0;
+  for (animal of crewList) {
+    totalMass += animal.mass;
+  }
+  totalMass = Math.round(totalMass * 10) / 10;
+  return totalMass;
+}
+
+console.log(calculateCrewMass(crew));
+// Code your fuelRequired function here:
+
+
+// The pre-selected crew is in the array at the end of this file.
+// Feel free to add, remove, or switch crew members as you see fit.
